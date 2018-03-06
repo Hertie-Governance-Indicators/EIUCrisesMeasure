@@ -4,11 +4,6 @@
 # MIT License
 # ---------------------------------------------------------------------------- #
 
-# Set working directory. Change as needed.
-possible_dir <- c('/git_repositories/EIUCrisesMeasure/',
-                  '~/git_repositories/EIUCrisesMeasure/')
-simpleSetup::set_valid_wd(possible_dir)
-
 # Run set up script
 source('source/pca_kpca/setup/setup.R')
 
@@ -19,7 +14,7 @@ eiu_df <- as.data.frame(eiu_list)
 eiu_df <- gather(eiu_df, id, text)
 
 eiu_dfm <- eiu_df %>% corpus %>% dfm
- 
+
 ####
 # Remove sparse terms--this differs from the KPCA preprocessing, but is
 # necessary for PCA to be possible as the number of terms does not exceed the

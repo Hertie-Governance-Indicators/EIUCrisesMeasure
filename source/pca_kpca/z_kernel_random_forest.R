@@ -17,11 +17,6 @@ cores_custom <- detectCores() - 1
 # Note randomForestSRC must be correctly configured
 options(rf.cores = cores_custom, mc.cores = cores_custom)
 
-# Set working directory. Change as needed.
-possible_dir <- c('/git_repositories/EIUCrisesMeasure/',
-                  '~/git_repositories/EIUCrisesMeasure/')
-simpleSetup::set_valid_wd(possible_dir)
-
 # Run set up script
 source('source/pca_kpca/setup/setup.R')
 

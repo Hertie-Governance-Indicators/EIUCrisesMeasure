@@ -5,11 +5,6 @@
 # MIT License
 # ---------------------------------------------------------------------------- #
 
-# Set working directory. Change as needed.
-possible_dir <- c('/git_repositories/EIUCrisesMeasure/',
-                  '~/git_repositories/EIUCrisesMeasure/')
-simpleSetup::set_valid_wd(possible_dir)
-
 # Run set up script
 source('source/pca_kpca/setup/setup.R')
 
