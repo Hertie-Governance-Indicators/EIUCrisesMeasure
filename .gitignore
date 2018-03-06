@@ -46,3 +46,4 @@ submissions/*
 source/pca_kpca/setup/temp/*
 .DS_Store
 */.app.history
+.Rproj.user
