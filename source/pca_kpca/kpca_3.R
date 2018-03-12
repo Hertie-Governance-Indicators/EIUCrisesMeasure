@@ -5,6 +5,10 @@
 # MIT License
 # ---------------------------------------------------------------------------- #
 
+# Set working directory. Change as needed.
+possible_dir <- c('/Users/cjyetman/Documents/github/FinStress')
+simpleSetup::set_valid_wd(possible_dir)
+
 # Run set up script
 source('source/pca_kpca/setup/setup.R')
 
