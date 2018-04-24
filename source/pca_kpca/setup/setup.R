@@ -14,7 +14,8 @@ pkgs <- c('quanteda', 'kernlab', 'repmis', 'tidyverse', 'rio', 'lubridate',
 library_install(pkgs)
 
 # Load preprocessed data (see source/preprocess_eiu.R)
-load('source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rda')
+# load('source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rda')
+eiu_list <- readRDS('source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rds')
 
 # Extract identifying country names and document dates
 country_date <- names(eiu_list)
