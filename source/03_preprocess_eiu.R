@@ -74,3 +74,21 @@ names(eiu_list) <- paste(eiu_ids[, 'iso3c'], eiu_ids[, 'date'], sep = '_')
 # save(eiu_list, file = 'source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rda')
 saveRDS(eiu_list, file = 'source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rds')
 
+# save subsets of the preprocessed data
+saveRDS(eiu_list[grepl("2017", names(eiu_list))],
+        file = 'source/pca_kpca/preprocessed_data/eiu_texts_2017.rds')
+
+saveRDS(eiu_list[grepl("201[6-8]", names(eiu_list))],
+        file = 'source/pca_kpca/preprocessed_data/eiu_texts_2016_2018.rds')
+
+saveRDS(eiu_list[grepl("201[3-5]", names(eiu_list))],
+        file = 'source/pca_kpca/preprocessed_data/eiu_texts_2013_2015.rds')
+
+saveRDS(eiu_list[grepl("201[0-2]", names(eiu_list))],
+        file = 'source/pca_kpca/preprocessed_data/eiu_texts_2010_2012.rds')
+
+saveRDS(eiu_list[grepl("200[7-9]", names(eiu_list))],
+        file = 'source/pca_kpca/preprocessed_data/eiu_texts_2007_2009.rds')
+
+saveRDS(eiu_list[grepl("200[3-6]", names(eiu_list))],
+        file = 'source/pca_kpca/preprocessed_data/eiu_texts_2003_2006.rds')
