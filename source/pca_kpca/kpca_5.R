@@ -5,7 +5,8 @@
 # ---------------------------------------------------------------------------- #
 
 # Set working directory. Change as needed.
-possible_dir <- c('/Users/cjyetman/Documents/github/FinStress')
+possible_dir <- c('/Users/cjyetman/Documents/github/FinStress',
+                  '/home/ubuntu/EIUCrisesMeasure-gr18')
 simpleSetup::set_valid_wd(possible_dir)
 
 # Run set up script
