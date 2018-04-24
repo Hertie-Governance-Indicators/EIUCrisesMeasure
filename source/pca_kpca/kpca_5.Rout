@@ -1,7 +1,7 @@
 
-R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
-Copyright (C) 2016 The R Foundation for Statistical Computing
-Platform: x86_64-apple-darwin14.5.0 (64-bit)
+R version 3.4.3 (2017-11-30) -- "Kite-Eating Tree"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -24,21 +24,20 @@ Type 'q()' to quit R.
 > # ---------------------------------------------------------------------------- #
 > 
 > # Set working directory. Change as needed.
-> possible_dir <- c('/git_repositories/EIUCrisesMeasure/',
-+                   '~/git_repositories/EIUCrisesMeasure/')
+> possible_dir <- c('/Users/cjyetman/Documents/github/FinStress-gr18/')
 > simpleSetup::set_valid_wd(possible_dir)
-Working directory set to: ~/git_repositories/EIUCrisesMeasure/
+Working directory set to: /Users/cjyetman/Documents/github/FinStress-gr18/
 > 
 > # Run set up script
 > source('source/pca_kpca/setup/setup.R')
-quanteda version 0.9.8.9035
-
+quanteda version 1.0.0
+Using 3 of 4 threads for parallel computing
 
 Attaching package: ‘quanteda’
 
-The following object is masked from ‘package:base’:
+The following object is masked from ‘package:utils’:
 
-    sample
+    View
 
 
 Attaching package: ‘repmis’
@@ -47,17 +46,16 @@ The following object is masked from ‘package:simpleSetup’:
 
     set_valid_wd
 
-Loading tidyverse: ggplot2
-Loading tidyverse: tibble
-Loading tidyverse: tidyr
-Loading tidyverse: readr
-Loading tidyverse: purrr
-Loading tidyverse: dplyr
-Conflicts with tidy packages ---------------------------------------------------
-alpha():    ggplot2, kernlab
-filter():   dplyr, stats
-lag():      dplyr, stats
-tokenize(): readr, quanteda
+── Attaching packages ─────────────────────────────────────── tidyverse 1.2.1 ──
+✔ ggplot2 2.2.1     ✔ purrr   0.2.4
+✔ tibble  1.4.2     ✔ dplyr   0.7.4
+✔ tidyr   0.8.0     ✔ stringr 1.3.0
+✔ readr   1.1.1     ✔ forcats 0.3.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ ggplot2::alpha() masks kernlab::alpha()
+✖ purrr::cross()   masks kernlab::cross()
+✖ dplyr::filter()  masks stats::filter()
+✖ dplyr::lag()     masks stats::lag()
 
 Attaching package: ‘rio’
 
@@ -80,10 +78,6 @@ The following object is masked from ‘package:ggplot2’:
 
     annotate
 
-The following object is masked from ‘package:quanteda’:
-
-    ngrams
-
 
 Attaching package: ‘tm’
 
@@ -96,13 +90,5 @@ The following objects are masked from ‘package:quanteda’:
 > system.time(
 +     kpca_eiu(eiu_list, country_date, length_spec = 5, n_period = 2,
 +              out_dir = 'source/pca_kpca/raw_data_output/5_strings/')
-+ ) 
++ )
 Running KPCA . . .
-Rescaling . . .
-Eigenvalues . . .
-      user     system    elapsed 
-292842.704    166.462 292482.389 
-> 
-> proc.time()
-      user     system    elapsed 
-292849.603    166.668 292489.486 
