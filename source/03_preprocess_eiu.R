@@ -29,6 +29,8 @@ date_country$iso3c <- countrycode(date_country$country,
 
 # Load corpus and preprocess
 texts_df <- readtext(file = list.files(path = "data/eiu_extracted/", full.names = T))
+# saveRDS(texts_df, "source/texts_df.rds")
+# texts_df <- readRDS(texts_df, "source/texts_df.rds")
 
 # Apply clean row names
 texts_df <- cbind(texts_df, date_country)
