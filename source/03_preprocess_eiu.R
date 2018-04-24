@@ -71,4 +71,6 @@ eiu_ids <- texts_df_2003[keep_vec, c('date', 'iso3c')]
 names(eiu_list) <- paste(eiu_ids[, 'iso3c'], eiu_ids[, 'date'], sep = '_')
 
 # Save preprocessed corpus in the git repository. Change as needed.
-save(eiu_list, file = 'source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rda')
+# save(eiu_list, file = 'source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rda')
+saveRDS(eiu_list, file = 'source/pca_kpca/preprocessed_data/eiu_texts_from_2003.rds')
+
