@@ -23,6 +23,9 @@ kpca_eiu <- function(corpus, country_date, length_spec = 5, feature_num = 10,
         stop('corpus and country_date must have the same number of observations',
              call. = FALSE)
 
+    # create ouput directory if it doesn't exist
+    if (!dir.exists(out_dir)) { dir.create(out_dir) }
+
     # Create string kernels
     kernels <- stringdot(type = "spectrum", length = length_spec)
 
